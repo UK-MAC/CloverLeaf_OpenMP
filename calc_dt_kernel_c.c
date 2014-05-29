@@ -135,6 +135,9 @@ void calc_dt_kernel_c_(int *xmin,int *xmax,int *ymin,int *ymax,
     }
   }
 
+#if (_OPENMP == 200805)
+#error (OpenMP 3.0 detected.  Need at least OpenMP 3.1 to use next pragma!)
+#endif
 #pragma omp for private(j) reduction(min:dt_min_val)
   for (k=y_min;k<=y_max;k++) {
 #pragma ivdep
