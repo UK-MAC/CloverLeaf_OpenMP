@@ -448,7 +448,7 @@ SUBROUTINE clover_exchange_message(chunk,field,                            &
 
   INTEGER      :: chunk,depth,field_type
 
-  INTEGER      :: size,err,request(8),tag,message_count,j,k,x_inc,y_inc,index
+  INTEGER      :: size,err,request(8),tag,message_count,x_inc,y_inc
   INTEGER      :: receiver,sender
 
   ! Field type will either be cell, vertex, x_face or y_face to get the message limits correct
